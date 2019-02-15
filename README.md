@@ -11,6 +11,10 @@ Import repo gpg key for installing signed packages:
 ```
 $ sudo curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 ```
+You may need to install the apt-transport-https package which is needed to fetch packages over HTTPS.
+```
+sudo apt-get install -y apt-transport-https
+```
 Update apt index and install influxdb package:
 ```
 $ sudo apt-get update
