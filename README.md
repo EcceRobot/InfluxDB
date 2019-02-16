@@ -51,6 +51,14 @@ InfluxDB default configuration file is located under _/etc/influxdb/influxdb.con
 Most sections are commented out, you can modify it to your liking and restart influxdb service after.
 
 
+## Authentication
+The local InfluxDB configuration file is located in _/etc/influxdb/influxdb.conf_.
+Determines whether user authentication is enabled over HTTP and HTTPS. By default, it is not required. To require authentication, set the value to true.
+```
+auth-enabled = true
+```
+
+
 ## InfluxDB HTTP API
 
 Use _/ping_ to check the status of your InfluxDB instance and your version of InfluxDB.
