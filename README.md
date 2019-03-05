@@ -37,24 +37,6 @@ You can check the status to confirm if running using:
 ```
 $ sudo systemctl status influxdb
 ```
-Open influxdb service ports on the firewall
-I use ufw firewall on all my Ubuntu 18.04 and Debian 9 servers. 
-If ufw is not installed, install it using the command:
-```
-$ sudo apt-get install ufw
-```
-Then activate firewall service:
-```
-$ sudo ufw enable
-```
-By default, InfluxDB uses the following network ports:
-* TCP port 8086 is used for client-server communication over InfluxDB’s HTTP API
-* TCP port 8088 is used for the RPC service for backup and restore
-
-We will open port 8086 since telegraf will push metrics using this port.
-```
-$ sudo ufw allow 8086/tcp
-```
 InfluxDB default configuration file is located under _/etc/influxdb/influxdb.conf_. 
 Most sections are commented out, you can modify it to your liking and restart influxdb service after.
 
@@ -71,6 +53,40 @@ auth-enabled = true
 du -sh /var/lib/influxdb/data/<db name>
 ```
 Where /var/lib/influxdb/data is the data directory defined in influxdb.conf
+
+## Terminal
+```
+influx
+```
+```
+CREATE USER nome_admin WITH PASSWORD 'password_admin' WITH ALL PRIVILEGES
+```
+Quindi si rientra con
+```
+influx -username nome_utente -password mia_password
+```
+verfichiamo con 
+```
+SHOW USERS
+```
+```
+CREATE DATABASE house_monitoring_DB
+```
+```
+DROP DATABASE house_monitoring_DB
+```
+```
+SHOW DATABASES
+```
+```
+USE nome_database
+```
+```
+SELECT * FROM nome_measurement
+```
+```
+DROP MEASUREMENT measurement_name
+```
 
 ## InfluxDB HTTP API
 
