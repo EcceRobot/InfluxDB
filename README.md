@@ -88,6 +88,23 @@ SELECT * FROM nome_measurement
 DROP MEASUREMENT measurement_name
 ```
 
+creo un utente con la sintassi:
+```
+CREATE USER <username> WITH PASSWORD '<password>'
+```
+e poi gli assegno i diritti:
+```
+GRANT [READ,WRITE,ALL] ON <database_name> TO <username>
+```
+es:
+```
+CREATE USER mkr1010 WITH PASSWORD '123456'
+```
+```
+GRANT WRITE ON myDB TO mkr1010
+```
+
+
 ## InfluxDB HTTP API
 
 Use _/ping_ to check the status of your InfluxDB instance and your version of InfluxDB.
