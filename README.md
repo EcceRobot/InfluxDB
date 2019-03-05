@@ -65,7 +65,12 @@ Determines whether user authentication is enabled over HTTP and HTTPS. By defaul
 ```
 auth-enabled = true
 ```
+## Disk Usage
 
+```
+du -sh /var/lib/influxdb/data/<db name>
+```
+Where /var/lib/influxdb/data is the data directory defined in influxdb.conf
 
 ## InfluxDB HTTP API
 
