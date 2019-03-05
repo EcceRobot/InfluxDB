@@ -4,9 +4,13 @@
 
 Add influxdata repository using the following command:
 ```
-$ cat /etc/apt/sources.list.d/influxdb.list 
+$ sudo nano /etc/apt/sources.list.d/influxdb.list 
+```
+and write into the file
+```
 deb https://repos.influxdata.com/debian stretch stable
 ```
+
 Import repo gpg key for installing signed packages:
 ```
 $ sudo curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
