@@ -27,8 +27,12 @@ $ sudo apt-get install influxdb
 Start influxdb service:
 ```
 $ sudo systemctl start influxdb
+```
+Start influxdb service on boot:
+```
 $ sudo systemctl enable influxdb
 ```
+
 You can check the status to confirm if running using:
 ```
 $ sudo systemctl status influxdb
