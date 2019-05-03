@@ -87,6 +87,9 @@ SELECT * FROM nome_measurement
 ```
 DROP MEASUREMENT measurement_name
 ```
+```
+DROP SERIES FROM "Temperature" WHERE station='client_1'
+```
 
 creo un utente con la sintassi:
 ```
